@@ -26,8 +26,7 @@ public class PracticeStream {
     }
 
     static void printSumByRecursive(Integer[] addValues) {
-        int sum = addMethod(0, addValues, 0);
-        System.out.println("[재귀함수] sum is " + sum);
+        System.out.println("[재귀함수] sum is " + addMethod(0, addValues, 0));
     }
 
     static int addMethod(int i, Integer[] addValues, int sum) {
@@ -41,7 +40,6 @@ public class PracticeStream {
     }
 
     static void printSumByStream(Integer[] addValues) {
-        int sum = Arrays.stream(addValues).reduce(0, (a, b) -> a + b);
-        System.out.println("[스트림] sum is " + sum);
+        System.out.println("[스트림] sum is " + Arrays.stream(addValues).reduce(0, (a, b) -> a + b));
     }
 }
