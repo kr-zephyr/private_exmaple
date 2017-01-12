@@ -17,7 +17,7 @@ public class PracticeStream {
         printSumByStream(addValues);
     }
 
-    static void printSumByFor(Integer[] addValues) {
+    private static void printSumByFor(Integer[] addValues) {
         int sum = 0;
         for(int v : addValues) {
             sum += v;
@@ -25,21 +25,20 @@ public class PracticeStream {
         System.out.println("[for] sum is " + sum);
     }
 
-    static void printSumByRecursive(Integer[] addValues) {
+    private static void printSumByRecursive(Integer[] addValues) {
         System.out.println("[재귀함수] sum is " + addMethod(0, addValues, 0));
     }
 
-    static int addMethod(int i, Integer[] addValues, int sum) {
+    private static int addMethod(int i, Integer[] addValues, int sum) {
         try {
             sum += addValues[i++];
             return addMethod(i, addValues, sum);
         } catch (ArrayIndexOutOfBoundsException e) {
+            return sum;
         }
-
-        return sum;
     }
 
-    static void printSumByStream(Integer[] addValues) {
+    private static void printSumByStream(Integer[] addValues) {
         System.out.println("[스트림] sum is " + Arrays.stream(addValues).reduce(0, (a, b) -> a + b));
     }
 }
