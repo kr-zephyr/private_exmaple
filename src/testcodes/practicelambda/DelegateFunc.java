@@ -4,7 +4,7 @@ public class DelegateFunc {
 
     public static void main(String[] args) {
         // Function 정의
-        CountFunc cCount = (char[] c) -> c.length;
+        CountFunc cCount = (c) -> c.length;
 
         System.out.println("도메인의 캐릭터 수 :: " + countDomain(cCount));
         System.out.println("특정 문자열의 캐릭터 수 :: " + countHello(cCount));
