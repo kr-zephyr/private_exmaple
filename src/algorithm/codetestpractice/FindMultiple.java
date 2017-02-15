@@ -1,4 +1,4 @@
-package com.sz21c.cp;
+package algorithm.codetestpractice;
 
 /**
  * 1~20 (?) 배수 찾기

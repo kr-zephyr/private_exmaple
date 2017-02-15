@@ -1,4 +1,4 @@
-package com.sz21c.cp;
+package algorithm.codetestpractice;
 
 /**
  * 두개의 Set에서 공통 분모 찾기

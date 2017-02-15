@@ -1,4 +1,4 @@
-package codingdojang.p105countnumbers;
+package algorithm.codingdojang.p105countnumbers;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.sz21c.cp;
+package algorithm.codetestpractice;
 
 /**
  * 51/82=0.6219512195121951, 이처럼 반복되는 소수를 찾는 프로그램을 작성하시오

@@ -1,4 +1,4 @@
-package com.sz21c.cp;
+package algorithm.codetestpractice;
 
 /**
  * 2014년 요일은 구하라.

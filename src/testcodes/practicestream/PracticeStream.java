@@ -1,4 +1,4 @@
-package practicestream;
+package testcodes.practicestream;
 
 import java.util.Arrays;
 

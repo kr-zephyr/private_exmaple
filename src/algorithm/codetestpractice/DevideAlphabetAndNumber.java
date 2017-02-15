@@ -1,4 +1,4 @@
-package com.sz21c.cp;
+package algorithm.codetestpractice;
 
 /**
  * 알파벳, 숫자로 구성된 문자열에서 알파벳과 숫자를 분리.

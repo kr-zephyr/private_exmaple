@@ -1,4 +1,4 @@
-package practicelambda;
+package testcodes.practicelambda;
 
 public class DelegateFunc {
 

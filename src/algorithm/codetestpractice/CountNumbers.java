@@ -1,4 +1,4 @@
-package com.sz21c.cp;
+package algorithm.codetestpractice;
 
 import java.util.HashMap;
 import java.util.Map;

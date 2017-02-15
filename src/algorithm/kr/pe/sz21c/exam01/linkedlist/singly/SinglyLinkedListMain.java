@@ -1,7 +1,4 @@
-package kr.pe.sz21c.exam01.linkedlist.singly;
-
-import java.util.LinkedList;
-import java.util.List;
+package algorithm.kr.pe.sz21c.exam01.linkedlist.singly;
 
 public class SinglyLinkedListMain {
 	public static void main(String args[]) {

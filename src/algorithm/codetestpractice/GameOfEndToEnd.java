@@ -1,4 +1,4 @@
-package com.sz21c.cp;
+package algorithm.codetestpractice;
 
 /**
  * 끝말 잇기 프로그램을 작성하되 한번 나온 단어는 다시 나오지 않도록 한다.

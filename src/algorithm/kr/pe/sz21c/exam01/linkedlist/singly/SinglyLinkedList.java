@@ -1,4 +1,4 @@
-package kr.pe.sz21c.exam01.linkedlist.singly;
+package algorithm.kr.pe.sz21c.exam01.linkedlist.singly;
 
 public class SinglyLinkedList<T> {
 	
