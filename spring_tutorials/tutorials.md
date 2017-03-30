@@ -6,3 +6,5 @@
 [Tutorial: Thymeleaf + Spring](http://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html)
 
 [SpringBoot 배너 만들기](https://beyondj2ee.wordpress.com/2017/03/17/springboot-%eb%b0%b0%eb%84%88-%eb%a7%8c%eb%93%a4%ea%b8%b0/)
+
+[Spring Tips: Apache MyBatis](https://spring.io/blog/2017/02/22/spring-tips-apache-mybatis)
