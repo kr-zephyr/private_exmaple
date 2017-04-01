@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="sampleApp">
+<head>
+    <meta charset="UTF-8">
+    <script src="../angular/angular.js"></script>
+    <script type="text/javascript">
+        angular.module('sampleApp', []).
+        directive('hello', function() {
+            return {
+                templateUrl: "template/helloTmpl_1.html",
+                // template: "<h1>hello <span>name</span></h1>",
+                restrict: "AE",
+                link: function link ($scope, $element, $attrs, $transclude) {
+                    $scope.name = $attrs.name;
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <div hello name="angularJS"></div>
+</body>
+</html>

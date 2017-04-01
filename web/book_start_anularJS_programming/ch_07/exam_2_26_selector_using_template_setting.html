@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="sampleApp">
+<head>
+    <meta charset="UTF-8">
+    <script src="../angular/angular.js"></script>
+    <script type="text/javascript">
+        angular.module('sampleApp', []).
+        directive('hello', function() {
+            return {
+                template: "<h1>hello <span>name</span></h1>",
+                restrict: "AE",
+                link: function link (scope, iEl, iAt, ctrl) {
+                    iEl.find("span").text(iAt.name);
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <div hello name="angularJS"></div>
+</body>
+</html>
