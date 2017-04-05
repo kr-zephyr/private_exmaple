@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="sampleApp">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="http://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.min.js"></script>
+    <script src="../angular/angular.js"></script>
+    <script type="text/javascript">
+        angular.module('sampleApp', []).
+            directive('ngSparkline', [function () {
+                return {
+                    restrict: "EA",
+                    scope: {
+                        chartData: "="
+                    },
+                    link: function(scope, iElement, iAttrs) {
+                        var options = {type: iAttrs.charType || 'line'};
+                        scope.$watch('chartData', function(bfData, afData) {
+                            jQuery(iElement).sparkline(scope.chartData, options);
+                        }, true);
+                    }
+                };
+            }]).
+            controller('sampleCtrl', function($scope) {
+                $scope.chartData = [0, 0, 0];
+            });
+    </script>
+</head>
+<body ng-controller="sampleCtrl">
+    <div>
+        <input type="number" ng-model="chartData[0]"><input type="number" ng-model="chartData[1]"><input type="number" ng-model="chartData[2]">
+        <br>
+        <p>데이터: {{chartData}}</p>
+    </div>
+    <ng-sparkline chart-data="chartData" chart-type="bar"></ng-sparkline>
+</body>
+</html>
