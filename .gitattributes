@@ -1,1 +1,4 @@
 web/book_start_anularJS_programming/angular/* linguist-vendored
+web/book_start_anularJS_programming/ngBookmark/bower_components/* linguist-vendored
+web/book_start_anularJS_programming/ngBookmark/node_modules/* linguist-vendored
+web/book_start_anularJS_programming/ngBookmark/app/bower_components/* linguist-vendored
