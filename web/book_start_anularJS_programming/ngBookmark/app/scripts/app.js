@@ -17,7 +17,19 @@ angular.module("ngBookmark")
                 }
             })
             .when('/bookmarks/:bookmarkId', {
-                templateUrl: 'scripts/bookmark/template/bookmark-detail.tmpl.html', controller: 'bookmarkDetailCtrl'
+                templateUrl: 'scripts/bookmark/template/bookmark-detail.tmpl.html', 
+                controller: 'bookmarkDetailCtrl',
+                resolve: {
+                    bookmark : function (Bookmark, $route) {
+                        return Bookmark.get({
+                            bookmarkId : $route.current.params.bookmarkId
+                        }).$promise;
+                    }
+                }
+            })
+            .when('/new-bookmark', {
+                templateUrl : 'scripts/bookmark/template/bookmark-new.tmpl.html',
+                controller : 'bookmarkAddCtrl'
             })
             .otherwise({
                 redirectTo: '/bookmarks'
