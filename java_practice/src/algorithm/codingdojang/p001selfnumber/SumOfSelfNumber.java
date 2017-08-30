@@ -37,6 +37,7 @@ public class SumOfSelfNumber {
 			String num = String.valueOf(i);
 			int sumOfNumElement = 0;
 			
+			//TODO 재귀로 풀면 sumOfNumElement 필요 없을 듯
 			for(int j = 0; j < num.length(); j++) {
 				sumOfNumElement += Integer.valueOf(num.substring(j, j + 1));
 			}
@@ -45,6 +46,7 @@ public class SumOfSelfNumber {
 		}
 		
 		for(int i = 0; i < MAX_NUM; i++) {
+			//TODO 재귀나 스트림으로 풀면 sumSelfNum 제거 가능
 			if(!hasGenerators.contains(i)) {
 				sumSelfNum += i;
 			}
