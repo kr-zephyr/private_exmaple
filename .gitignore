@@ -1,4 +1,5 @@
 .idea/
 *.iml
-java_practice/out/
+java_practice/out/**
+out/
 **/target/*
