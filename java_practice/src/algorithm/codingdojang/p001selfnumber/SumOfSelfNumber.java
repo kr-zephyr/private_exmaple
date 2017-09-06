@@ -16,7 +16,7 @@ import java.util.List;
  * 어떤 숫자들은 하나 이상의 제네레이터를 가지고 있는데, 101의 제네레이터는 91 뿐 아니라 100도 있다. 그런데 반대로, 제네레이터가 없는 숫자들도 
  * 있으며, 이런 숫자를 인도의 수학자 Kaprekar가 셀프 넘버(self-number)라 이름 붙였다. 예를 들어 1,3,5,7,9,20,31 은 셀프 넘버 들이다.
  *
- * 1 이상이고 5000 보다 작은 모든 셀프 넘버들의 합을 구하라.
+ * 1 이상이고 5000 보다 작은 모든 셀프 넘버들의 합을 구하라. (결과 1227365)
  * 
  * --> 풀이 방향
  * 1 ~ 5000의 각 값을 연산하여 제네레이터를 가질 수 있는 값을 찾은 후 제네레이터를 가지지 못한 값을 추출하는 방식...
@@ -34,15 +34,16 @@ public class SumOfSelfNumber {
 		int sumSelfNum = 0;
 		
 		for(int i = 1; i < MAX_NUM; i++) {
-			String num = String.valueOf(i);
-			int sumOfNumElement = 0;
+//			String num = String.valueOf(i);
+//			int sumOfNumElement = 0;
 			
 			//TODO 재귀로 풀면 sumOfNumElement 필요 없을 듯
-			for(int j = 0; j < num.length(); j++) {
-				sumOfNumElement += Integer.valueOf(num.substring(j, j + 1));
-			}
-			
-			hasGenerators.add(sumOfNumElement + i);
+//			for(int j = 0; j < num.length(); j++) {
+//				sumOfNumElement += Integer.valueOf(num.substring(j, j + 1));
+//			}
+//			
+//			hasGenerators.add(sumOfNumElement + i);
+			hasGenerators.add(getSumOfNumElements(0, String.valueOf(i), 0) + i);
 		}
 		
 		for(int i = 0; i < MAX_NUM; i++) {
@@ -53,5 +54,17 @@ public class SumOfSelfNumber {
 		}
 		
 		System.out.println("sum of self number is " + sumSelfNum);
+	}
+	
+	private static int getSumOfNumElements(int currNum, String num, int sumOfNumElements) {
+		if(currNum < num.length()) {
+			sumOfNumElements = getSumOfNumElements(
+				currNum + 1, 
+				num, 
+				sumOfNumElements + Integer.valueOf(num.substring(currNum, currNum + 1))
+			);
+		}
+		
+		return sumOfNumElements;
 	}
 }
