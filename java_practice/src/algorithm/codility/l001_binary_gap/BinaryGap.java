@@ -20,7 +20,7 @@ public class BinaryGap {
 			boolean startedOne = false;
 			
 			while(N > 0) {
-				System.out.print(N%2);
+//				System.out.print(N%2);
 				if(!startedOne && N % 2 == 1) startedOne = true;
 				
 				if(startedOne && N % 2 == 0) {
@@ -28,10 +28,11 @@ public class BinaryGap {
 				} else {
 					if(startedOne && maxZeroCount < countZeros) {
 						maxZeroCount = countZeros;
-						countZeros = 0;
 					}
+					countZeros = 0;
 				}
 				N = N / 2;
+//				System.out.println((N % 2) + ", countZeros : " + (countZeros + 1) + ", maxZeroCount : " + maxZeroCount);
 			}
 			
 			return maxZeroCount;
