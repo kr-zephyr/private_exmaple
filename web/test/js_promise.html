@@ -1,0 +1,29 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script>
+			console.log("start");
+
+			function getPromise() {
+				return Promise.resolve("hello promise");
+			}
+
+			function getPromiseReject() {
+				return Promise.reject("error!!!");
+			}
+			
+			var msg = '';
+			getPromise().then(function(result) {
+				console.log("result :: " + result);
+			});
+
+			getPromiseReject().then(function(result) {
+				console.log("result :: " + result);
+			}).catch(function(error) {
+				console.log("rejected to log :: " + error);
+				console.error("rejected to error :: " + error);
+			});
+		</script>
+	</body>
+</html>
