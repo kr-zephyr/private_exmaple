@@ -27,7 +27,9 @@ public class BasicMovieManager {
 	public void persistMovie(Movie movie) {
 		Session session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
+		
 		session.save(movie);
+		
 		session.getTransaction().commit();
 	}
 	

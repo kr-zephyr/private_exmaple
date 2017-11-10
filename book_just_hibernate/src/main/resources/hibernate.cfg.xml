@@ -20,6 +20,12 @@
 			org.hibernate.dialect.MySQL5Dialect
 		</property>
 		<property name="hbm2ddl.auto">update</property>
+		<!--
+		 아래의 설정이 빠져 있으면 org.hibernate.HibernateException: No CurrentSessionContext configured!이 발생됨
+		 3.1 이상부터는 SessionFactory.getCurrentSessoin() 사용 시 CurrentSessionContext와 아래 설정을 통해 현재 세션의 범위를 정의해야 함
+		
+		 # http://docs.jboss.org/hibernate/orm/3.3/reference/en/html/architecture.html#architecture-current-session 
+		-->
 		<property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
 		<mapping resource="Movie.hbm.xml"/>
 	</session-factory>
