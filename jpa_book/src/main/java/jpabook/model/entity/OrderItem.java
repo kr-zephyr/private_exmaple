@@ -11,51 +11,53 @@ public class OrderItem {
     @Column(name = "ORDER_ITEM_ID")
     private Long id;
 
-    @Column(name = "ITEM_ID")
-    private Long itermId;
-
-    @Column(name = "ORDER_ID")
-    private Long orderId;
-
+    @ManyToOne
+    @JoinColumn(name = "ITEM_ID")
+    private Item item;
+    
+    @ManyToOne
+    @JoinColumn(name = "ORDER_ID")
+    private Order order;
+    
     private int orderPrice; //주문 가격
     private int count;      //주문 수량
-
+    
     public Long getId() {
         return id;
     }
-
+    
     public void setId(Long id) {
         this.id = id;
     }
-
-    public Long getItermId() {
-        return itermId;
+    
+    public Item getItem() {
+        return item;
     }
-
-    public void setItermId(Long itermId) {
-        this.itermId = itermId;
+    
+    public void setItem(Item item) {
+        this.item = item;
     }
-
-    public Long getOrderId() {
-        return orderId;
+    
+    public Order getOrder() {
+        return order;
     }
-
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
+    
+    public void setOrder(Order order) {
+        this.order = order;
     }
-
+    
     public int getOrderPrice() {
         return orderPrice;
     }
-
+    
     public void setOrderPrice(int orderPrice) {
         this.orderPrice = orderPrice;
     }
-
+    
     public int getCount() {
         return count;
     }
-
+    
     public void setCount(int count) {
         this.count = count;
     }
